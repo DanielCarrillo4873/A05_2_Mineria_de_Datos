@@ -9,7 +9,7 @@ df = pd.read_csv("cancer.csv")
 # Imprimimos su contenido para verificar que se haya abierto correctamente
 print(df)
 # Reemplazamos los guiones medios por guiones bajos para poder manipular la información correctamente
-df['recurrence'] = df.str.replace('-', '_')
+df['recurrence'] = df['recurrence'] .str.replace('-', '_')
 # Almacenamos en dos variables distintas la cantidad de veces que encontremos el valor de no_recurrence_events y recurrence_events
 # en nuestra clase para poder llevar a cabo la descripción del modelo con Zero-R
 no_recurrence_events = df.recurrence.value_counts().no_recurrence_events
@@ -32,4 +32,5 @@ else:
 # descripción del modelo
 df["model"]=value
 # Sobreescribimos nuestro archivo para guardar los cambios agregados
-df.to_csv ("cancer.csv", index = False, header=True)
+df.to_csv ("cancer_zero_r.csv", index = False, header=True)
+print('New file created')
