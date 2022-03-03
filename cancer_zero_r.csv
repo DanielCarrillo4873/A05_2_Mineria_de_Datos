@@ -1,5 +1,5 @@
 age,menopause,tumor-size,inv-nodes,node-caps,deg-malig,breast,breast-quad,irradiat,recurrence,model
-30-39,premeno,30-34,0-2,no,3,left,left_low,no,no_recurrence_events,no-recurrence-events
+20-29 30-39 40-49 50-59 60-69 70-79,ge40 lt40 premeno,0-4 5-9 10-14 15-19 20-24 25-29 30-34 35-39 40-44 45-49 50-54,0-2 3-5 6-8 9-11 12-14 15-17,no yes,1 2 2003,left right,central left_low left_up right_low right_up,no yes,no_recurrence_events recurrence_events,no-recurrence-events
 40-49,premeno,20-24,0-2,no,2,right,right_up,no,no_recurrence_events,no-recurrence-events
 40-49,premeno,20-24,0-2,no,2,left,left_low,no,no_recurrence_events,no-recurrence-events
 60-69,ge40,15-19,0-2,no,2,right,left_up,no,no_recurrence_events,no-recurrence-events

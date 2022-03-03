@@ -8,7 +8,7 @@ def open_and_create_csv():
 	# Se crea un string vacío el cual servirá para crear la descripción del modelo con Zero-R
 	value = ''
 	# Abrimos el archivo cancer.csv y lo asignamos a la variable df
-	df = pd.read_csv("cancer.csv")
+	df = pd.read_csv("cancer.csv", skiprows=[2,3])
 	# Imprimimos su contenido para verificar que se haya abierto correctamente
 	print(df)
 	# Reemplazamos los guiones medios por guiones bajos para poder manipular la información correctamente

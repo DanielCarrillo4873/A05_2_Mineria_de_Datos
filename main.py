@@ -20,7 +20,7 @@ while(end_programm == False):
     # Utilizamos try except para poder mantener abierto el programa en caso de que, al elegir una opción, el usuario
     # ingrese un valor distinto a un integer, evitando fallos en el código
     try:
-        menu = int(input('What do you wanna do now?:\n1: Create new csv for zero-r\n2: Implement zero-r\n3: End programm\n'))
+        menu = int(input('What do you wanna do now?:\n1: Create cancer_zero_r.csv file\n2: Implement zero-r\n3: End programm\n'))
         if menu == 1:
             create_new_zero_r_model()
         elif menu == 2:
