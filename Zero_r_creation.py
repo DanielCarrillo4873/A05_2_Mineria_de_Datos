@@ -2,6 +2,8 @@
 # la descripción del modelo con Zero-R en caso de que haya un empate en la cantidad de instancias con el mismo valor de la clase
 import pandas as pd
 import random
+# Definimos la función open_and_create_csv la cual nos servirá para abrir el csv original y con este crear un nuevo archivo
+# que utilizaremos para utilizar el algoritmo de zero-r
 def open_and_create_csv():
 	# Se crea un string vacío el cual servirá para crear la descripción del modelo con Zero-R
 	value = ''
@@ -32,6 +34,7 @@ def open_and_create_csv():
 	# Añadimos una nueva columna al archivo cancer.csv llamada "model" cuyos valores predeterminados serán el valor asignado para la
 	# descripción del modelo
 	df["model"]=value
-	# Sobreescribimos nuestro archivo para guardar los cambios agregados
+	# Sobreescribimos nuestro archivo para guardar los cambios agregados. En caso de ya existir el archivo cancer_zero_r
+	# lo sobreescribirá también
 	df.to_csv ("cancer_zero_r.csv", index = False, header=True)
 	print('New file created')
