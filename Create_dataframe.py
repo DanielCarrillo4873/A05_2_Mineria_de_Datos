@@ -4,7 +4,6 @@
 from sklearn.model_selection import train_test_split
 import pandas as pd
 import os
-import numpy as np
 
 # Se crea la función dataframe_zerro_r la cual nos servirá para dividir nuestro archivo específico para zero-r en un
 # porcentaje de 70:30. Siendo 70% para entrenamiento y 30% para prueba
