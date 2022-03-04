@@ -11,7 +11,7 @@ def open_and_create_csv():
 	value = ''
 	# Abrimos el archivo cancer.csv y lo asignamos a la variable df. A su vez, ignoramos las filas 2 y 3 las cuales
 	# contienen información que no nos es de utilidad para implementar nuestros algoritmos
-	df = pd.read_csv("cancer.csv", skiprows=[2,3])
+	df = pd.read_csv("cancer.csv", skiprows=[1,2])
 	# Imprimimos su contenido para verificar que se haya abierto correctamente
 	print(df)
 	# Reemplazamos los guiones medios por guiones bajos para poder manipular la información correctamente

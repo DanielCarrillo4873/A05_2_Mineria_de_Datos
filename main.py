@@ -22,12 +22,22 @@ while(end_program == False):
     # Utilizamos try except para poder mantener abierto el programa en caso de que, al elegir una opción, el usuario
     # ingrese un valor distinto a un integer, evitando fallos en el código
     try:
+        # Se imprime un menú para que el usuario decida lo que desea hacer
         menu = int(input('What do you wanna do now?:\n1: Create cancer_zero_r.csv file\n2: Implement zero-r\n3: End programm\n'))
+        # En caso de elegir la primer opción se creará un nuevo archivo csv para trabajar con el algoritmo de Zero-R
         if menu == 1:
             create_new_zero_r_model()
         elif menu == 2:
+            # En el caso de elegir la segunda opción se pedirá que ingrese la cantidad de iteraciones que desea para
+            # Probar el algoritmo de Zero-R. De ser 0, un valor negativo, etc. No se le permitirá al usuario proseguir
             iterations = int(input('Enter the number of iterations you want to make: '))
-            use_train_test_with_zero_r(iterations)
+            if iterations > 0:
+                use_train_test_with_zero_r(iterations)
+            else:
+                print('You must enter a valid number of iterations')
+                os.system('pause')
+                os.system('cls')
+        # En caso de elegir la tercer opción cerrará el programa
         elif menu == 3:
             print('Bye bye')
             end_program = True 
